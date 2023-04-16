@@ -1,0 +1,237 @@
+<html>
+	<head>
+		<title>#vrp</title>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/augmented-ui@2/augmented-ui.min.css">
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+    <body style="display: none;">
+        <aside>
+            <div class="background" data-augmented-ui="br-clip"></div>
+
+            <header>
+                <img id="logo" src="https://i.imgur.com/mnEWeao.png">
+                <label>barbearia</label>
+            </header>
+
+            <section id="items">
+                <div class="line">
+                    <hr><label>Cabelos</label><hr>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>Estilo do cabelo <b class="label-value" data-legend="77"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="hair" class="hair" min="-1" max="77">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>cores do cabelo <b class="label-value" data-legend="60"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="haircolor" class="haircolor" min="-1" max="60">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>luzes do cabelo <b class="label-value" data-legend="60"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="haircolor2" class="haircolor2" min="-1" max="60">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <hr><label>Maquiagem</label><hr>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>Estilo da maquiagem <b class="label-value" data-legend="72"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="makeup" class="makeup" min="-1" max="72">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>cores da maquiagem <b class="label-value" data-legend="62"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="makeupcolor" class="makeupcolor" min="-1" max="62">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <hr><label>Labios</label><hr>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>estilo do batom <b class="label-value" data-legend="10"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="lipstick" class="lipstick" min="-1" max="10">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>Cores do Batom <b class="label-value" data-legend="63"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="lipstickcolor" class="lipstickcolor" min="-1" max="63">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <hr><label>Olhos</label><hr>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>estilo da sobrancelha <b class="label-value" data-legend="34"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="eyebrow" class="eyebrow" min="-1" max="34">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>cores da sobrancelha <b class="label-value" data-legend="54"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="eyebrowcolor" class="eyebrowcolor" min="-1" max="54">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line">
+                    <hr><label>Barba</label><hr>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>Estilo da barba <b class="label-value" data-legend="28"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="beard" class="beard" min="-1" max="28">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>cores da barba <b class="label-value" data-legend="54"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="beardcolor" class="beardcolor" min="-1" max="54">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="line">
+                    <hr><label>Bochechas</label><hr>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>estilo do blush <b class="label-value" data-legend="32"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="blush" class="blush" min="-1" max="32">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-augmented-ui="br-clip">
+                    <div class="item-photo"></div>
+                    
+                    <div class="item-info">
+                        <div class="title">
+                            <small>cores do blush <b class="label-value" data-legend="63"></b></small>
+                        </div>
+                        <div class="item-input" data-augmented-ui="br-clip">
+                            <div class='arrowS arrow arrow-left'><i class='fas fa-chevron-left'></i></div>
+                            <input value="0" type="range" id="blushcolor" class="blushcolor" min="-1" max="63">
+                            <div class='arrowS arrow arrow-right'><i class='fas fa-chevron-right'></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="background" data-augmented-ui="br-clip"></div>
+                <div class="footer-info">
+                    <span> <b>[A]</b>   ESQUERDA / <b>[D]</b>   DIREITA</span><br>
+                    <span><b>[ESC]</b> DESFAZER ALTERAÇÕES</span>
+                </div>
+                <div class="actions">                    
+                    <button id="save" class="submit yes" data-augmented-ui="br-clip">Salvar alterações</button>
+                </div>
+            </footer>
+        </aside>   
+
+		<script src="font.js"></script>
+		<script src="front.js" type="text/javascript"></script>
+		<script src="script.js" type="text/javascript"></script>
+    </body>
+</html>

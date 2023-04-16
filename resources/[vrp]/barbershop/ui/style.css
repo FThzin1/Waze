@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+* {
+    outline: none;
+    list-style: none;
+    user-select: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+aside {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    height: 90%;
+    width: 500px;
+    overflow: hidden;
+    transform: translate(0,-50%); 
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #1F2326;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header #logo {
+    max-width: 50%;
+    margin-bottom: 20px;
+}
+
+header label {
+    position: relative;
+    top: -10px;
+    opacity: .6;
+    color: #fff;
+    font-size: 8px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+section {
+    width: 100%;
+    /*height: 380px;*/
+    overflow: auto;
+    padding: 0 10px;
+    height: 755px;
+    margin-top: 0px;
+}
+
+section .line {
+    color: #fff;
+    display: flex;
+    font-size: 9px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+section .arrowS {
+    opacity: .8;
+}
+
+section .line:first-child{
+    margin-top: 0;
+}
+
+section .line hr {
+    width: 40%;
+    border: 0;
+    height: 2px;
+    background-color: #272C30;
+}
+
+section .item {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    padding: 5px;
+    display: flex;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+    background-color: #272C30;
+}
+
+section .item .item-info {
+    position: relative;
+    top: 15px;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+}
+
+section .item .item-info small {
+    color: #fff;
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+section .item .item-input {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    color: #fff;
+    margin-top: 5px;
+    padding: 0 20px;
+    align-items: center;
+    background-color: #1F2326;
+    justify-content: space-between;
+}
+
+input {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 4px;
+  outline: none;
+  opacity: 0.7;
+  border-radius: 5px;  
+  background: #272C30;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 50%; 
+  background: rgb(212, 108, 28);
+}
+
+input::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #315FAF;
+}
+
+section .item span {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    color: #fff;
+    font-size: 7px;
+    padding: 5px 10px;
+    background-color: #272C30;
+    text-transform: uppercase;
+}
+
+.selected {
+    background-color: #81c3a1 !important;
+}
+
+section .item:last-child {
+    margin: 0;
+}
+
+section .item .item-photo {
+    width: 90px;
+    height: 100%;
+    background-size: cover;
+    background-color: #1F2326;
+    border: 3px solid #1F2326;
+    background-image: url('https://i.imgur.com/KIesqMj.png');
+}
+
+section .item .price {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    color: #fff;
+    font-size: 7px;
+    padding: 3px 10px;
+    padding-right: 7px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: #b3792c;
+    box-shadow: 0 0 0.1rem transparent, inset 0 0 0.1rem transparent, 0 0 .7rem #b3792c, inset 0 0 .7rem #b3792c
+}
+
+footer {
+    position: absolute;
+    left: 50%;
+    width: 95%;
+    bottom: 12px;
+    height: 100px;
+    display: flex;
+    font-size: 8px;
+    text-align: center;
+    letter-spacing: 1px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    transform: translate(-50%,0);
+}
+
+footer .footer-info {
+    position: relative;
+    top: 20px;
+    height: 100%;
+    display: flex;
+    color: #bbb;
+    line-height: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .cart-price {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    color: #fff;
+    font-size: 13px;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F2326;
+}
+
+b {
+    color: rgb(212, 108, 28);
+}
+
+footer .color-clothe {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    color: #fff;
+    font-size: 15px;
+    padding: 0 10px;
+    margin-left: 10px;
+    align-items: center;
+    background-color: #1F2326;
+    justify-content: space-between;
+}
+
+footer button {
+    border: 0;
+    width: 100%;
+    color: #fff;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 10px;
+    transition: .5s;
+    margin-top: 25px;
+    border-radius: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #b3792c;
+}
+
+footer .actions {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+}
+
+.cam-shop {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translate(0%,-50%);
+}
+
+.cam-shop .item-cam {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin-bottom: 10px;
+    transition: all .2s;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #272C30;
+}
+.cam-shop .item-cam:last-child{
+    margin: 0;
+}
+.cam-shop .item-cam:hover{
+    background-color: #b3792c;
+    box-shadow: 0 0 0.1rem transparent, inset 0 0 0.1rem transparent, 0 0 .7rem #b3792c, inset 0 0 .7rem #b3792c
+}
+.cam-shop .item-cam:active {
+    transform: scale(1.1);
+}
+.cam-shop .item-cam img {
+    max-width: 40%;
+}
+
+footer button:hover {
+    background-color: rgb(212, 108, 28);
+}
+
+footer .background {
+    background-color: #272C30 !important;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: #272C30;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #272C30;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b3792c; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b3792c; 
+}
+
+@media only screen and (max-width: 1600px) { /* 1600x900 */
+    aside {
+        height: 70%;
+        width: 350px;
+    }
+    section {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1366px) { /* 1366x768 */
+    aside {
+        height: 70%;
+        width: 300px;
+    }
+    section {
+        height: 320px;
+    }
+}
+
+@media only screen and (max-width: 1200px) { /* 1366x768 */
+    aside {
+        height: 70%;
+        width: 330px;
+    }
+    section {
+        height: 380px;
+    }
+}

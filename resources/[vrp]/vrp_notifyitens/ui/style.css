@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web&display=swap');
+
+
+html {
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+	background-color: transparent !important;
+}
+
+body {
+  background: transparent !important;
+}
+
+#notifyitens {
+  position: absolute;
+	right: 0;
+	bottom: 15%;
+    zoom: 1.1;
+}
+.fundo{
+  position: relative;
+  float: right;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.329));
+  border: 1px solid rgba(94, 93, 93, 0.459);
+  border-radius: 10px;
+  min-width: 250px;
+  transition: all 0.5s ease 0s;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  bottom: 0px;
+  height: 55px;
+  margin-top: 5px;
+  margin-right: 5px;
+  animation: subindo 0.5s linear 1;
+}
+.fundofalso{
+  width: 40px;
+  height: 20px;
+  float: left;
+}
+.fundoimg{
+  width: 20px;
+  position: absolute  ;
+  left: 0;
+  height: 50px;
+  float: left;
+  border-radius: 5px;
+}
+.fundofalso img{
+  width: 40px;
+  z-index: 99;
+  height: 40px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.texto{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  position: relative;
+  left: 60px;
+  top: -12px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-size: 12px;
+  width: 240px;
+  line-height: 15px;
+  color: rgb(255, 255, 255);
+}
+.aviso{
+  font-size: 10px;
+  color: rgb(245, 241, 0);
+  font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+
+@keyframes subindo {
+  0%{
+    right: -300px;
+  }
+  100%{        
+    right: 0px;
+  }
+}

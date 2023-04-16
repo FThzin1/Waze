@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>#creative</title>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="nui://game/ui/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: transparent">
+<div id="server"><img src="https://cdn.discordapp.com/attachments/992442382425542676/1095162698653769899/Logo-500x500.png"></div>
+
+
+<div id="hud">
+    <div id="hudDisplay">
+        <div id="carDisplay"></div>
+    </div>
+    <div id="pbar_outerdiv">
+        <div id="pbar_innerdiv"></div>
+    </div>
+    <div class="container1">
+        <div class="container2">
+            <div id="health"></div>
+        </div>
+    </div>
+    <div class="discordgg">discord.gg/wazerp</div>
+</div>
+<div id="hoodDisplay"></div>
+<div id="movieTop"></div>
+<div id="movieBottom"></div>
+<script>
+    $(document).ready(function () {
+        window.addEventListener("message", function (event) {
+
+            const data = event["data"]
+            if (data["hood"] !== undefined) {
+                if (data["hood"] == true) {
+                    $("#hoodDisplay").fadeIn(500);
+                } else {
+                    $("#hoodDisplay").fadeOut(500);
+                }
+            }
+
+            if (data["hud"] !== undefined) {
+                if (data["hud"] == true) {
+                    $("#hud").fadeIn(500);
+                    $("#hudDisplay").css("display", "block");
+                } else {
+                    $("#hud").fadeOut(500);
+                    $("#hudDisplay").css("display", "none");
+                }
+                return
+            }
+
+            if (data["movie"] !== undefined) {
+                if (data["movie"] == true) {
+                    $("#movieTop").fadeIn(500);
+                    $("#movieBottom").fadeIn(500);
+                } else {
+                    $("#movieTop").fadeOut(500);
+                    $("#movieBottom").fadeOut(500);
+                }
+                return
+            }
+
+            if (data["health"] <= 1) {
+                $("#health").css("width", "0%");
+            } else {
+                $("#health").css("width", data["health"] + "%");
+            }
+
+            if (data["car"] == true) {
+                let mph = data["seatbelt"] == true ? "<s>KMH</s>" : "<b>KMH</b>"
+                if (data["speed"] >= 100) {
+                    mph = mph + parseInt(data["speed"]);
+                } else if (data["speed"] >= 10) {
+                    mph = mph + "0" + parseInt(data["speed"]);
+                } else {
+                    mph = mph + "00" + parseInt(data["speed"]);
+                }
+                $("#carDisplay").css("display", "block");
+                $("#carDisplay").html(mph);
+            } else {
+                $("#carDisplay").css("display", "none");
+            }
+
+            // Progress Bar
+            if (data !== undefined && data["type"] === "ui") {
+                if (data["display"] === true) {
+                    $("#pbar_outerdiv").fadeIn(500);
+                    let start = new Date();
+                    let maxTime = data["time"];
+                    let timeoutVal = Math.floor(maxTime / 100);
+                    animateUpdate();
+
+                    function updateProgress(percentage) {
+                        $('#pbar_innerdiv').css("width", percentage + "%");
+                    }
+
+                    function animateUpdate() {
+                        let now = new Date();
+                        let timeDiff = now.getTime() - start.getTime();
+                        let perc = Math.round((timeDiff / maxTime) * 100);
+                        if (perc <= 100) {
+                            updateProgress(perc);
+                            setTimeout(animateUpdate, timeoutVal);
+                        } else {
+                            $("#pbar_outerdiv").fadeOut(500);
+                        }
+                    }
+                } else {
+                    $("#pbar_outerdiv").fadeOut(500);
+                }
+            }
+
+        });
+    });
+</script>
+</body>
+
+</html>

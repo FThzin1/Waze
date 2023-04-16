@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <title>pdr#8400</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+</head>
+<body style="background-image: url(https://cdn.discordapp.com/attachments/965946187347787878/1032108254395912232/background.png);">
+    <section>
+        <header>
+            <i class="fa-light fa-map"></i>
+            <div class="title">
+                <h1>SPAWN</h1>
+                <h2>ESCOLHA UM LOCAL PARA SPAWNAR</h2>
+            </div>
+        </header>
+
+        <main>
+            <div class="locale" style="background-image: url('./src/images/1.png'), linear-gradient(220deg, #0885df 0%, #101010 80%);">
+                <small>LOCAL</small>
+                <span>GARAGEM</span>
+                <button>NASCER</button>
+            </div>
+            <div class="locale" style="background-image: url('./src/images/2.png'), linear-gradient(220deg, #0885df 0%, #101010 80%);">
+                <small>LOCAL</small>
+                <span>HOSPITAL</span>
+                <button>NASCER</button>
+            </div>
+            <div class="locale" style="background-image: url('./src/images/3.png'), linear-gradient(220deg, #0885df 0%, #101010 80%);">
+                <small>LOCAL</small>
+                <span>DELEGACIA</span>
+                <button>NASCER</button>
+            </div>
+            <div class="locale" style="background-image: url('./src/images/4.png'), linear-gradient(220deg, #0885df 0%, #101010 80%);">
+                <small>LOCAL</small>
+                <span>BASE</span>
+                <button>NASCER</button>
+            </div>
+        </main>
+
+        <footer>
+            <i class="fa-light fa-location-dot"></i>
+            <p>ULTIMA LOCALIZAÇÃO</p>
+        </footer>
+    </section>
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            :root {
+                --bgColor: rgba(0, 2, 32, 0.5);
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                outline: none;
+                user-select: none;
+                box-sizing: border-box;
+                font-family: 'Rubik';
+            }
+
+            body {
+                height: 100vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            section {
+                width: 100%;
+                height: 100%;
+                background: var(--bgColor);
+            
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            header {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                width: 1205px;
+            }
+
+            header i {
+                color: white;
+                font-size: 25px;
+            }
+
+
+            .title {
+                margin-left: 20px;
+            }
+
+            .title h1 {
+                font-weight: 700;
+                font-size: 25px;
+                color: #FFFFFF;
+            }
+
+            .title h2 {
+                font-weight: 400;
+                font-size: 15px;
+                color: rgba(255, 255, 255, 0.52);
+            }
+
+
+            main {
+                display: flex;
+                margin-top: 20px;
+            }
+
+            .locale {
+                width: 300px;
+                height: 380px;
+                border-radius: 5px;
+                margin: 0 10px;
+                opacity: 0.4;
+            
+            
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                text-align: center;
+            
+                padding: 20px;
+            }
+
+            .locale small {
+                font-weight: 400;
+                font-size: 12px;
+                color: rgba(255, 255, 255, 0.67);
+            }
+
+            .locale span {
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 30px;
+                color: #FFFFFF;
+            }
+
+            .locale button {
+                width: 161px;
+                height: 38px;
+                border-radius: 5px;
+                border: 1px solid #0040ff;
+                background: #0040ffa6;
+            
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 12px;
+                color: #FFFFFF
+            }
+
+            .locale button:hover, .locale:hover {
+                transition: 0.5s;
+                opacity: 1;
+            
+            }
+
+            .locale button:hover {
+                transition: 0.8s;
+                background: #0040ff;
+                border: 1px solid #0077ff;
+            }
+
+            footer {
+                color: white;
+                text-align: center;
+                position: absolute;
+            	bottom: 0;
+            
+                padding-bottom: 20px;
+            }
+
+            footer i {
+                font-size: 25px;
+                padding: 7px 15px;
+                margin-bottom: 10px;
+                border-radius: 2px;
+                background: rgba(23, 23, 23, 0.6);
+                border: 1px solid rgba(255, 255, 255, 0.11);
+            }
+
+            footer i:hover {
+                transition: 0.5s;
+                background: #0040ff;
+            }
+
+            footer p {
+                font-weight: 700;
+                font-size: 15px;
+                color: #FFFFFF;
+            }
+    </style>
+    
+
+    <script src="./src/script/script.js"></script>
+</body>
+</html>

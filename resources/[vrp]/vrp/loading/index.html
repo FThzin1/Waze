@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>	
+	    <title>LoadScreen-InfinityStudio</title>
+	    <link href="style.css" rel="stylesheet" type="text/css" />	
+    </head>
+
+		<video autoplay muted loop id="myVideo">
+			<source src="./video.mp4" type="video/mp4" style="width: 100%;">
+		</video>
+
+		
+		<audio id="loading-music" loop autoplay="autoplay">
+			<source hidden="true" autostart="true" loop="true" src="" />
+		</audio>
+
+		<script>
+			var music = document.getElementById("loading-music");
+			music.volume = 0.1;
+			document.addEventListener('keypress', (event) => {
+				if (event.key == "p") {
+					if (music.paused) {
+						music.play();
+					} else {
+						music.pause();
+					}
+				} else if (event.key == "s") {
+					music.volume = music.volume - 0.05;
+				} else if (event.key == "w") {
+					music.volume = music.volume + 0.05;
+				} 
+			});
+		</script>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+:root {
+  --color: #040404;
+  --gradient: rgba(28, 28, 28, 0.48);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+
+  overflow: hidden;
+  padding-top: 135px;
+}
+
+body .notify {
+  width: 263px;
+  min-height: 58px;
+  max-height: max-content;
+  border-radius: 6px;
+  background: rgba(23, 23, 23, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+
+  padding: 10px;
+  margin-right: 25px;
+  margin-bottom: 8px;
+
+  position: relative;
+
+  animation: showNotify 0.2s forwards;
+}
+
+body .notify .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .notify .title h1 {
+  font-size: 14px;
+  color: #ffffff;
+
+}
+
+body .notify .title i {
+  color: white;
+
+  font-size: 17px;
+}
+
+body .notify .message p {
+  font-size: 12px;
+  display: flex;
+  margin-top: 0.2vw;
+  margin-bottom: 1vw;
+  color: #e9e9e9;
+  font-family: "Roboto Flex";
+}
+
+body .notify .progress {
+  width: 100%;
+  height: 2px;
+  background: rgba(23, 23, 23, 0.6);
+  border-radius: 4px;
+
+  margin-top: 6px;
+}
+
+body .notify .progress .progressValue {
+  width: 90%;
+  height: 2px;
+  background: #1b63e9;
+  border-radius: 4px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes showNotify {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
